@@ -42,7 +42,7 @@
 
 To acomplish this task, I chose a framework and language I'm well versed in by using [Laravel Zero](https://laravel-zero.com/). Laravel Zero is an unofficial fork of the [Laravel Framework](https://laravel.com/) that only includes its libraries for building and executing console commands. Using the framework, I wrote the command `ProcessDownloadHistory.php` to perform the task that was outlined in the provided README. 
 
-I first wanted to create maps of both Contributor and Resource classes since I'll need easy access to those instances once I start parsing downloads. Reading through the file, I first parsed Contributors and added them to the map, followed by Resources. With both maps built, I was able to easily parse through downloads and push the instances onto a Laravel `Collection` instance. A `Collection` is a Laravel utility that allows you to perform a variety of array manipulation commands, which came in very handy when having to filter the result set, sort it, and finally build the result. With the data set built, the methods available in the Console libraries of the framework allow for printing clean output, as well as output in a table format. I gave this as an option for the command.
+I first wanted to create maps of both Contributor and Resource classes since I'll need easy access to those instances once I start parsing downloads. Reading through the file, I first parsed Contributors and added them to the map, followed by Resources. With both maps built, I was able to easily parse through downloads and push the instances onto a Laravel `Collection` instance. A `Collection` is a Laravel utility that allows you to perform a variety of array manipulation commands, which came in very handy when having to filter the result set, sort it, and finally build it to be displayed. With the data set built, the methods available in the Console libraries of the framework allow for printing clean output, as well as output in a table format. I gave this as an option for the command.
 
 # File Structure
 - `Commands/ProcessDownloadHistory.php`
@@ -68,7 +68,7 @@ I always try to aim for full test coverage over the code I write, so on top of t
 - An empty file.
 - A file that has a contributor with no downloads.
 - A file with only 1 contributor that has downloads.
-- A file with two contributors that have downloads.
+- A file with 2 contributors that have downloads.
 - A file with 1 contributor that has downloads outside of the year 2020.
 - A file with 1 contributor having resources below a 2 rating.
 - A file that has an unknown resource on a download.
